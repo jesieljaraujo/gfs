@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps App</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        #search-box {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mapa de Endereços</h1>
+    <div id="search-box">
+        <input type="text" id="address-input" placeholder="Digite um endereço e a cidade" />
+        <button onclick="searchAddress()">Pesquisar</button>
+    </div>
+    <div id="map"></div>
+
+    <script src="script.js"></script>
+    <!-- API do Google Maps -->
+    <script
+        async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWrbhc6R2gqhXCjCw9xteFKqVFxXhqIxo&callback=initMap"
+    ></script>
+</body>
+</html>

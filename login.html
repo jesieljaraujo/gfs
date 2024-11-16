@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        #login-form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 100px auto;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="login-form">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button id="login-button">Entrar</button>
+        <p id="error-message" style="color: red; display: none;">Usuário ou senha inválidos!</p>
+    </div>
+
+    <script>
+        // Credenciais estáticas
+        const STATIC_USERNAME = "admin";
+        const STATIC_PASSWORD = "12345";
+
+        // Adicionar evento ao botão de login
+        document.getElementById("login-button").addEventListener("click", () => {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Verificar credenciais
+            if (username === STATIC_USERNAME && password === STATIC_PASSWORD) {
+                // Redirecionar para a página do mapa
+                window.location.href = "index.html";
+            } else {
+                // Mostrar mensagem de erro
+                document.getElementById("error-message").style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
