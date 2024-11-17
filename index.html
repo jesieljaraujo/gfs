@@ -19,26 +19,26 @@
 <body>
     <div id="login-form">
         <h2>Login</h2>
-        <input type="text" id="username" placeholder="Usuário" required>
-        <input type="password" id="password" placeholder="Senha" required>
+        <input type="text" id="username" placeholder="UsuÃ¡rio" required><br>
+        <input type="password" id="password" placeholder="Senha" required><br>
         <button id="login-button">Entrar</button>
-        <p id="error-message" style="color: red; display: none;">Usuário ou senha inválidos!</p>
+        <p id="error-message" style="color: red; display: none;">UsuÃ¡rio ou senha invÃ¡lidos!</p>
     </div>
 
     <script>
-        // Credenciais estáticas
+        // Credenciais estÃ¡ticas
         const STATIC_USERNAME = "admin";
-        const STATIC_PASSWORD = "12345";
+        const STATIC_PASSWORD = "12345gf";
 
-        // Adicionar evento ao botão de login
+        // Adicionar evento ao botÃ£o de login
         document.getElementById("login-button").addEventListener("click", () => {
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
 
             // Verificar credenciais
             if (username === STATIC_USERNAME && password === STATIC_PASSWORD) {
-                // Redirecionar para a página do mapa
-                window.location.href = "index.html";
+                // Redirecionar para a pÃ¡gina do mapa
+                window.location.href = "default.html";
             } else {
                 // Mostrar mensagem de erro
                 document.getElementById("error-message").style.display = "block";
